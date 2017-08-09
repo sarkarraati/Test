@@ -1,0 +1,27 @@
+{
+  "name": "Appointment Reminders Java",
+  "description": "Notify customers of upcoming appointments",
+  "keywords": [
+    "twilio",
+    "spark",
+    "java"
+  ],
+  "scripts": {
+    "postdeploy": "java -cp target/classes:target/server.jar com.twilio.appointmentreminders.Migrator"
+  },
+  "addons": [
+    "heroku-postgresql:hobby-dev"
+  ],
+  "env": {
+    "TWILIO_ACCOUNT_SID": [
+    "AC61329a2cc2d6d75d1cd79724bbb79238"],
+    "TWILIO_AUTH_TOKEN": [
+    "cab2c3a6ff62fa01813d2ac6e8a0fa06"],
+    "TWILIO_PHONE_NUMBER": [
+    "+18565563982"]
+  },
+  "website": "https://github.com/TwilioDevEd/appointment-reminders-java",
+  "repository": "https://github.com/TwilioDevEd/appointment-reminders-java",
+  "logo": "https://s3.amazonaws.com/howtodocs/twilio-logo.png",
+  "success_url": "/"
+}
